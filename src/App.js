@@ -7,18 +7,20 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Post from "./components/post/Post";
+import About from "./components/about/About";
 
 function App() {
-  const user = true;
+  const user = false;
   return (
     <>
       <TopBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
         <Route path="/register" element={user ? <Home /> : <Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/write" element={<Write />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/login" element={user ? <Home /> : <Login />} />
+        <Route path="/write" element={user ? <Write /> : <Register />} />
+        <Route path="/settings" element={user ? <Settings /> : <Register />} />
         <Route path="/post/:postID" element={<Single />} />
       </Routes>
     </>
