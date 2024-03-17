@@ -1,0 +1,25 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contactImg {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
+span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
