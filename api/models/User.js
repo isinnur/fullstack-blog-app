@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
     username: {
       type: String,
@@ -21,30 +21,9 @@ const userSchema = new mongoose.Schema(
       default: "",
     },
   },
+
+  //? createdAt ve updatedAt olmak üzere ekstra 2 alan ekler
   { timestamps: true }
 );
 
-// import mongoose from "mongoose";
-
-// const bookSchema = mongoose.Schema(
-//   {
-//     title: {
-//       type: String,
-//       required: true,
-//     },
-
-//     author: {
-//       type: String,
-//       required: true,
-//     },
-//     publishYear: {
-//       type: Number,
-//       required: true,
-//     },
-//   },
-//   {
-//     timestamps: true,
-//   }
-// );
-
-// export const Book = mongoose.model("Book", bookSchema);
+module.exports = mongoose.model("User", UserSchema);
