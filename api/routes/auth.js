@@ -19,6 +19,22 @@ router.post("/register", async (req, res) => {
     res.status(500).json(err);
   }
 });
-module.exports = router;
 
 //! LOGIN
+router.post("/login", async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.body.username });
+    !user && res.status(400).json("Wrong credentials!");
+
+    //kullanıcı bulunduğunda gelen parolanın hash'ini kullanıcı veritabanındaki hash ile karşılaştırmak için compare kullanılır
+    //doğruysa validate true döner
+    const validated = await bcrypt.compare(req.body.password, user.password);
+    !validated && res.status(400).json("Wrong credentials!");
+    const { password, ...others } = user._doc;
+    res.status(200).json(others);
+  } catch (err) {
+    res.status(200).json(err);
+  }
+});
+
+module.exports = router;
