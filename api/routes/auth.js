@@ -1,15 +1,17 @@
 const router = require("express").Router();
 const User = require("../models/User");
+const bcrypt = require("bcrypt"); //parolalaroı güvenli bir şekilde saklamak için
 
 //! REGISTER
 router.post("/register", async (req, res) => {
   try {
-    // const newUser = {
-    //username : req.body.username
+    const salt = await bcrypt.genSalt(10);
+    const hashedPass = await bcrypt.hash(req.body.password, salt);
+
     const newUser = new User({
       username: req.body.username,
       email: req.body.email,
-      password: req.body.password,
+      password: hashedPass,
     });
     const user = await newUser.save();
     res.status(200).json(user);
@@ -17,5 +19,6 @@ router.post("/register", async (req, res) => {
     res.status(500).json(err);
   }
 });
+module.exports = router;
 
 //! LOGIN
