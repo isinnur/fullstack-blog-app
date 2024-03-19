@@ -15,13 +15,15 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    username: {
+      type: String,
+      required: true,
+    },
     categories: {
       type: Array,
       required: false,
     },
   },
-
-  //? createdAt ve updatedAt olmak üzere ekstra 2 alan ekler
   { timestamps: true }
 );
 
