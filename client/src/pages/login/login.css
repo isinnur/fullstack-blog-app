@@ -50,7 +50,7 @@
 
 .loginButton:disabled {
   cursor: not-allowed;
-  background-color: coral;
+  background-color: rgb(253, 169, 169);
 }
 
 .loginRegisterButton {

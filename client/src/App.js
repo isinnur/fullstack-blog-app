@@ -9,9 +9,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Post from "./components/post/Post";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
+import { useContext } from "react";
+import { Context } from "./context/Contex";
 
 function App() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <>
       <TopBar />
