@@ -43,7 +43,7 @@ router.put("/:id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
+    const post = await Post.findById(req.params._id);
     if (post.username === req.body.username) {
       try {
         await post.delete();
@@ -55,7 +55,7 @@ router.delete("/:id", async (req, res) => {
       res.status(401).json("You can delete only your post!");
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ message: err.message || "An error occurred" });
   }
 });
 
