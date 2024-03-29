@@ -36,8 +36,6 @@ export default function SinglePost() {
     } catch (err) {}
   };
 
-  console.log(post.username === user.username);
-
   const handleUpdate = async () => {
     try {
       await axios.put(`/posts/${post._id}`, {
@@ -65,7 +63,7 @@ export default function SinglePost() {
           />
         ) : (
           <h1 className="singlePostTitle">
-            {post.title}
+            {title}
             {post.username === user.username && (
               <div className="singlePostEdit">
                 <i
