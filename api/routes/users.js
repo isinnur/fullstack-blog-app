@@ -2,7 +2,8 @@ const router = require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");
 const bcrypt = require("bcrypt");
-//! UPDATE
+
+//UPDATE
 router.put("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
@@ -26,7 +27,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-//! DELETE
+//DELETE
 router.delete("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
     try {
@@ -46,7 +47,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//! GET USER
+//GET USER
 router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);

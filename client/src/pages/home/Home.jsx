@@ -14,7 +14,6 @@ export default function Home() {
     const fetchPosts = async () => {
       const res = await axios.get("/posts" + search);
       setPosts(res.data);
-      console.log(res);
     };
     fetchPosts();
   }, [search]);
