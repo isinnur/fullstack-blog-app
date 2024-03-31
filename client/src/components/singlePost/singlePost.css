@@ -74,6 +74,10 @@
   font-size: 18px;
   line-height: 25px;
 }
+
+.dark .singlePostDesc {
+  color: #fbfff4;
+}
 .singlePostDescInput {
   color: #666;
   border: none;
