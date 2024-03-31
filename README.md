@@ -34,7 +34,7 @@ welcoming environment. Our intuitive dark/light mode ensures a comfortable readi
  <img src="https://github.com/isinnur/fullstack-blog-app/assets/98089962/01ad507a-3ad8-49b4-b86e-9b478efce6ec" width="50%"/>
 
 
-## Tech
+## Technologies
 - ReactJS
 - NodeJS
 - ExpressJS
