@@ -1,5 +1,8 @@
+import { useTheme } from "../../context/theme/Context";
 import "./contact.css";
 export default function Contact() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className="contact">
       <img

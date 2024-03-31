@@ -2,8 +2,8 @@ import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Contex";
-
 import axios from "axios";
+import { useTheme } from "../../context/theme/Context";
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -11,6 +11,7 @@ export default function Settings() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const { user, dispatch } = useContext(Context);
   const PF = "http://localhost:5000/images/";
@@ -43,7 +44,7 @@ export default function Settings() {
     }
   };
   return (
-    <div className="settings">
+    <div className={`settings ${theme}`}>
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update Your Account</span>
@@ -60,6 +61,7 @@ export default function Settings() {
               <i className="settingsPPIcon far fa-user-circle"></i>
             </label>
             <input
+              className="settingsPPInput"
               type="file"
               id="fileInput"
               style={{ display: "none" }}

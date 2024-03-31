@@ -1,10 +1,13 @@
+import { useTheme } from "../../context/theme/Context";
 import "./post.css";
 import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
+  const { theme, toggleTheme } = useTheme();
+
   const PF = "http://localhost:5000/images/";
   return (
-    <div className="post">
+    <div className={`post ${theme}`}>
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
       <div className="postInfo">
         <div className="postCats">

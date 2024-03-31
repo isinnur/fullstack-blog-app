@@ -1,7 +1,9 @@
+import { useTheme } from "../../context/theme/Context";
 import "./about.css";
-const about = () => {
+const About = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
-    <div className="about">
+    <div className={`about ${theme}`}>
       <img
         className="aboutImg"
         src="https://images.pexels.com/photos/20623990/pexels-photo-20623990/free-photo-of-mavi-bastankara-ruya-gibi.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -72,4 +74,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

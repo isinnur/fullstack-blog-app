@@ -32,12 +32,26 @@
   justify-content: center;
   cursor: pointer;
 }
+.write.dark input {
+  background-color: rebeccapurple;
+}
 
 .writeInput {
   font-size: 30px;
   border: none;
   padding: 20px;
   width: 70vw;
+  background-color: #fbfff4;
+  outline: none;
+}
+
+.dark .writeInput {
+  background-color: #101415;
+  color: #fbfff4;
+}
+
+.light .writeInput {
+  background-color: #fff;
 }
 
 .writeInput::placeholder {
@@ -69,4 +83,8 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.light {
+  background-color: #fff;
 }

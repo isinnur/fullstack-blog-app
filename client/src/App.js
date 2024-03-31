@@ -9,13 +9,16 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Post from "./components/post/Post";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "./context/Contex";
+import { useTheme } from "./context/theme/Context";
 
 function App() {
   const { user } = useContext(Context);
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <>
+    <div className={`${theme}`}>
       <TopBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -27,7 +30,7 @@ function App() {
         <Route path="/settings" element={user ? <Settings /> : <Register />} />
         <Route path="/post/:postID" element={<Single />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

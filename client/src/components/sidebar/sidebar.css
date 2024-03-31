@@ -64,3 +64,15 @@
   font-size: 16px;
   margin-left: 10px;
 }
+
+.sidebar.dark {
+  background-color: #191f20;
+  color: #fbfff4;
+}
+.sidebar.dark .sidebarTitle {
+  color: #fbfff4;
+}
+.light {
+  color: #101415;
+  background-color: #fbfff4;
+}

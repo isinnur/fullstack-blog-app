@@ -24,3 +24,11 @@
   margin-top: 20px;
   font-weight: bold;
 }
+
+.about.dark .aboutSection {
+  color: #fbfff4;
+}
+
+.about.dark span {
+  color: gray;
+}

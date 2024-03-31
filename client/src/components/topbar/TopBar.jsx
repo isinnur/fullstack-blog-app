@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
 import "./topbar.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../../context/Contex";
+import { useTheme, ThemeProvider } from "../../context/theme/Context";
 
 export const TopBar = () => {
   const { user, dispatch } = useContext(Context);
+  const { theme, toggleTheme } = useTheme();
+
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
     console.log(user);
   };
+  const PF = "http://localhost:5000/images/";
   return (
-    <div className="top">
+    <div className={`top ${theme}`}>
       <div className="topLeft">
         <i className="topIcon fa-brands fa-square-facebook"></i>
         <i className="topIcon fa-brands fa-square-x-twitter"></i>
@@ -47,7 +51,7 @@ export const TopBar = () => {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            <img className="topImg" src={user.profilePic} alt="" />
+            <img className="topImg" src={PF + user.profilePic} alt="" />
           </Link>
         ) : (
           <ul className="topList">
@@ -63,7 +67,13 @@ export const TopBar = () => {
             </li>
           </ul>
         )}
-        <i class="topSearc fa-solid fa-magnifying-glass"></i>
+        <div>
+          {theme === "light" ? (
+            <i onClick={toggleTheme} class="themeIcon  fa-solid fa-moon"></i>
+          ) : (
+            <i onClick={toggleTheme} class="themeIcon  fa-solid fa-sun"></i>
+          )}
+        </div>
       </div>
     </div>
   );

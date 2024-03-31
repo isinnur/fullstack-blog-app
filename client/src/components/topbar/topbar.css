@@ -25,6 +25,10 @@
   cursor: pointer;
 }
 
+.top.dark .topIcon {
+  color: #fbfff4;
+}
+
 .topCenter {
   flex: 6;
 }
@@ -62,4 +66,32 @@
   font-size: 18px;
   color: #666;
   cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+.icon .dark {
+  color: #fbfff4;
+}
+
+.icon:hover {
+  color: #666;
+}
+
+.themeIcon {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.dark {
+  background-color: #101415;
+  color: #fbfff4;
+}
+.light {
+  color: #101415;
+  background-color: #fbfff4;
 }

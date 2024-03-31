@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import "./sidebar.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/theme/Context";
 
 export default function Sidebar() {
+  const { theme, toggleTheme } = useTheme();
+
   const [cats, setCats] = useState([]);
   useEffect(() => {
     const getCats = async () => {
@@ -13,7 +16,7 @@ export default function Sidebar() {
     getCats();
   }, []);
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${theme}`}>
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME </span>
         <img

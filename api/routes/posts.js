@@ -55,7 +55,7 @@ router.delete("/:id", async (req, res) => {
       res.status(401).json("You can delete only your post!");
     }
   } catch (err) {
-    res.status(500).json({ message: err.message || "An error occurred" });
+    res.status(500).json(err);
   }
 });
 

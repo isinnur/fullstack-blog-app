@@ -59,3 +59,17 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+.post.dark .postTitle {
+  color: #fbfff4;
+}
+.post.dark {
+  background-color: #191f20;
+  border-radius: 10px;
+}
+
+.post.dark .postDesc {
+  color: #ebd9d9;
+}
+.post.dark .postDate {
+  color: #be9656;
+}

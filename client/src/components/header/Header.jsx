@@ -1,8 +1,11 @@
+import { useTheme } from "../../context/theme/Context";
 import "./header.css";
 
 export default function Header() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div className="header">
+    <div className={`header ${theme}`}>
       <div className="headerTitles">
         <span className="headerTitleSm">React & Node</span>
         <span className="headerTitleLg">Blog</span>

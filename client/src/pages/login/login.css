@@ -24,6 +24,7 @@
 
 .loginForm > label {
   margin: 10px 0;
+  color: black;
 }
 
 .loginInput {

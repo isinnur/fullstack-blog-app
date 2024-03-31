@@ -4,8 +4,11 @@ import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./singlePost.css";
+import { useTheme } from "../../context/theme/Context";
 
 export default function SinglePost() {
+  const { theme, toggleTheme } = useTheme();
+
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});

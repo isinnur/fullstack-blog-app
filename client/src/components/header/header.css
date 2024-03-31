@@ -28,3 +28,11 @@
   margin-top: 80px;
   object-fit: cover;
 }
+
+.header.dark .headerTitleSm {
+  color: #444;
+}
+.light {
+  color: #101415;
+  background-color: #fbfff4;
+}

@@ -1,5 +1,6 @@
 .settings {
   display: flex;
+  height: 100vh;
 }
 
 .settingsWrapper {
@@ -70,6 +71,12 @@
 
 .settingsPPInput {
   width: 30%;
+}
+
+.settings.dark input {
+  border-bottom: 1px solid #fbfff4;
+  background-color: #101415;
+  color: #fbfff4;
 }
 
 .settingsForm > input {

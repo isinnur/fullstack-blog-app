@@ -2,8 +2,11 @@ import { useContext, useState } from "react";
 import "./write.css";
 import { Context } from "../../context/Contex";
 import axios from "axios";
+import { useTheme } from "../../context/theme/Context";
 
 export default function Write() {
+  const { theme, toggleTheme } = useTheme();
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
@@ -36,7 +39,7 @@ export default function Write() {
       {file && (
         <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
       )}
-      <form className="writeForm" onSubmit={handleSubmit}>
+      <form className={`writeForm ${theme}`} onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
             <i className="writeIcon fas fa-plus"></i>
