@@ -5,13 +5,13 @@ With our inclusive community, iBlog empowers you to voice your stories, opinions
 welcoming environment. Our intuitive dark/light mode ensures a comfortable reading and writing experience, day or night.
 
 
-> ###  Login & Register Page
+> ###  Login & Register Pages
 ![3](https://github.com/isinnur/fullstack-blog-app/assets/98089962/51b20453-c431-474d-a1e6-17cac59a61a2)
 
-> ### Posts Page
+> ### Posts Pages
 ![1](https://github.com/isinnur/fullstack-blog-app/assets/98089962/5b47e983-e5ef-41ee-9f91-8c35db9ad2b2)
 
-> ###  Blog Writting Page
+> ###  Blog Writting Pages
 ![2](https://github.com/isinnur/fullstack-blog-app/assets/98089962/10e5c27e-221d-47e8-a7f0-e751ae5beeb5)
 
 ## Tech
