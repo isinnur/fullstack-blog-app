@@ -24,6 +24,7 @@
 
 .registerForm > label {
   margin: 10px 0;
+  color: black;
 }
 
 .registerInput {
