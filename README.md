@@ -14,6 +14,12 @@ welcoming environment. Our intuitive dark/light mode ensures a comfortable readi
 > ###  Blog Writting Page
 ![2](https://github.com/isinnur/fullstack-blog-app/assets/98089962/10e5c27e-221d-47e8-a7f0-e751ae5beeb5)
 
+## Tech
+- ReactJS
+- NodeJS
+- ExpressJS
+- MongoDB
+
 ## Key Features
 
 - **User-Friendly Authentication**: Get started easily with our streamlined login and sign-up process.
